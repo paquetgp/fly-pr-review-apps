@@ -1,6 +1,6 @@
-FROM alpine
+FROM elixir:1.19-otp-28
 
-RUN apk add --no-cache curl jq
+RUN apt-get update && apt-get install -y jq
 
 RUN curl -L https://fly.io/install.sh | FLYCTL_INSTALL=/usr/local sh
 
